@@ -1,361 +1,54 @@
-/* ###################### Define Variables ####################  */
-
-:root {
- --font-family: georgia ;
- --font-size-base: 16px ;
- --bg-url: url(https://merlins-ghast.neocities.org/Assets/stagger-stars.png) ;
- --cursor-url: url(https://merlins-ghast.neocities.org/Assets/MoonCursor.png);
-  
-}
-
-/* ##################### Small Media Query ####################  */
-@media (max-width: 850px) {
-
-
 body {
-
-  margin: 20px ;
+   font-family: georgia;
 }
 
-#computer, #sootie, #sootie-lit, #candy, #code, .narrow-hide {
- display: none ; 
+header {
+ display: flex;
+ flex-direction: column;
 }
 
-#topper {
- background-color: white ;
- border-bottom: 2px solid black ;
+#eyebrow {
+  font-weight: bold;
+  line-height: 1;
+  font-size: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 20px;
+  padding: 1px 5px;
+  margin: 0;
+  border-bottom: 1px solid #cedaf3;
 }
 
-/* ### FIXING BROKEN TABLES ### */
-
-/* If tables with a lot of columns are breaking the layout, 
-
-## (1) ##
-
-IF there are no colspan or rowspan, use the following:
-
-put the offending table into .break-table, and add an id.
-.break-table exists purely to signal the process when we are looking at the html,
-It's not actually required, but can help for debugging purposes
-
-in the style element in the head of the document add the following CSS 
-inside a narrow media query container:
-
-#id th:nth-child() {
-  display:none
-}
-#id td:nth-child() {
-  display:none
+#eyebrow a {
+  text-decoration: none;
+  color: #1d3994;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-This works with the format (An+B) where:
-- A is an interval, which can be negative
-- B is a bias (moves the start backwards or forwards)
-
-It can also target only selectors with certain classes, 
-for example, if we only want to hide th/td with the class "low",
-then we can write .break-table td.low:nth-child(n).
-
-## (2) ##
-
-IF you have used colspan, and the above doesn't work, use the following:
-
-Add .narrow-hide to all of the cells that you want to hide
-.narrow-hide is "display:none" but inside the narrow media query
-
-## (3) ##
-
-IF a table is often too wide even in a size that is NOT a narrow media query:
-
-Then put it inside .table-wrapper which enables x scrolling
-
-*/
-
-
-
-} 
-/* ###################### Large Media Query ####################  */
-@media (min-width: 850px){
-
-
-body {
-  display: grid ;
-  grid-template-columns: 2fr minmax(350px,5fr) minmax(325px,3fr) ;
-  cursor: url(https://merlins-ghast.neocities.org/Assets/MoonCursor.png), auto;
+#eyebrow ul {
+  display: flex;
+  list-style-type: none;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-
-
-.header-nav ul {  display: flex ; }
-
-a {
- cursor: url(https://merlins-ghast.neocities.org/Assets/MoonCursor.png), pointer;
+#eyebrow li {
+  border-right: 1px solid #cedaf3;
+  margin: 0;
+  padding: 0;
+  margin-right: 8px;
+  padding-right: 8px;
+  height: 100%;
 }
 
-#computer, #sakura, #doki, #cloudy, #cheer, #twinkle{
-  float: right ; 
-  height: 20px ;
-  margin-top: 20px ;
+#eyebrow .li-short {
+  border: none;
+  margin-right: 0;
+  padding-right: 0;
+  height: 100%;
 }
-
-#sootie {
-  height: 53px ;
-  padding-right: 10px ;
-  float: left ;
-}
-
-#sootie-lit {
-  padding: 0 ; 
-  margin: 0 ;
-}
-
-#candy {
-  float: left ; 
-  margin-right: 20px ;
-}
-
-#code {
-  float: right ;
-}
-
-#topper { display: none ; }
-
-.single-wide {  grid-column: 2 / span 1 ; }
-.double-wide {    grid-column: 2 / span 2 ; }
-.triple-wide {  grid-column: 1 / span 3 ; }
-
-.hidden {
-    display: none ;
-}
-
-::-webkit-scrollbar {
-  width: 15px ;
-}
-
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #81C6F0, #f4dffb) ;
-  border-radius: 15px ;
-  border: 1px solid black ;
-}
-
-::-webkit-scrollbar-track {
-  background-image: linear-gradient(to bottom, #d5ecfa, #FBF3FE);
-  border-radius: 15px ;
-  border: 1px solid #cceeff ;
-}
-
-.header-footer--wide-layout {
-  grid-column: 1 / span 3 ;
-} /* Delete after 07.26 maintenance loop is completed */
-
-} 
-/* ###################### General ####################  */
-
-body {
-  font-size: var(--font-size-base);
-  font-family: var(--font-family);
-  background-image: var(--bg-url);
-  background-size: 60px;
-}
-
-h1 { 
-  font-size: 2em ; 
-  margin-bottom: 5px ; 
-}
-
-h2 { font-size: 1.725em ; }
-h3 { font-size: 1.5em ; }
-h4 { font-size: 1.375em ; }
-h5 { font-size: 1.25em ; }
-h6 { font-size: 1.125em ; }
-
-strong { font-size: 1.125em ; }
-
-a { color: black ; }
-
-table, th, td {
-  border: 1px solid #E3ACFB; 
-  background-color: white;
-  margin: 10px;
-  padding: 10px;
-  text-align: left;
-  border-collapse: collapse;
-  box-shadow: 5px 5px 3px 0 #E3ACFB;
-}
-
-.table-wrapper {
-  overflow-x: auto ;
-}
-
-
-dl {  margin-left: 20px ; }
-dt {
-  font-weight: bold ; 
-  padding-bottom: 5px ;
-}
-dd {  padding-bottom: 10px ; }
-
-nav ul {
-  list-style-type: none ;
-  margin: 0 ;
-  padding: 0 ;
-}
-
-nav a {
-  display: block ;
-  padding: 10px ;
-  text-align: left ;
-  text-decoration: none ;
-  color: black ;
-}
-
-nav a:hover {
-  background-color: white ;
-  border-radius: 25px ;
-}
-
-.global--spacing {
-  margin: 10px ;
-  padding: 5px 20px ;
-  border-radius: 15px ;
-}
-
-.center { text-align: center ; }
-
-.current{  background-color: #ddeeff ; }
-
-.lyrics-table q {
- font-size: 1.125em ;
-}
-
-.lyrics-table q + p {
- margin-left: 50px ; 
-}
-
-/* ###################### Columns ####################  */
-
-.footer, .column__blue {
-  border: 7px solid white;  
-  border-image: url("https://merlins-ghast.neocities.org/Assets/Important-Borders/blue-scalloped-border.png") 7 fill round;
-}
- 
-.column__crayon {
-  border:7px solid white;
-  border-image: url("https://merlins-ghast.neocities.org/Assets/Important-Borders/blue-crayon-border.png") 7 fill round;
-}
-
-.column__purple {
-  border: 7px solid white;  
-  border-image: url("https://merlins-ghast.neocities.org/Assets/Important-Borders/purple-scalloped-background.png") 7 fill round;
-}
-
-
-
-.header, .column__center, .column__right, .column__white {
-  border: 7px solid white;  
-  border-image: url("https://merlins-ghast.neocities.org/Assets/Important-Borders/white-scalloped-border.png") 7 fill round;
-} /* After the 07.26 round is complete, delete header class */
-
-
-.column__green {
-  border: 7px solid white;  
-  border-image: url("https://merlins-ghast.neocities.org/Assets/Important-Borders/green-scalloped-border.png") 7 fill round;
-}
-
-.column__yellow, .column__left {
-  border: 7px solid white;  
-  border-image: url("https://merlins-ghast.neocities.org/Assets/Important-Borders/yellow-scalloped-border.png") 7 fill round;
-}
-
-.column__pink {
-  border: 7px solid white;  
-  border-image: url("https://merlins-ghast.neocities.org/Assets/Important-Borders/pink-scalloped-border.png") 7 fill round;
-}
-
-
-
-/* ###################### Boxes ####################  */
-
-.blogbox, .microblog {
-  background-color: white ;
-  font-size: 0.9em ;
-  margin: 5px ;
-  padding: 5px 10px 5px 20px ;
-  border-radius: 10px ;
-}
-
-.blogbox {
-  border: 1px solid #C7E8F9 ;
-  box-shadow: 5px 5px 3px 0 #C7E8F9 ;
-}
-
-.microblog {
-  border: 1px solid #FCBDDC ;
-  box-shadow: 5px 5px 3px 0 #FCBDDC ;
-  height: 100px ;
-  overflow-y: auto ;
-}
-
-.microblog--tall {  height: 250px ; }
-
-.microblog::-webkit-scrollbar {  width: 10px ; }
-
-.center--frozen {
-  height: 550px ;
-  overflow-y: scroll ;
-}
-
-.center--frozen::-webkit-scrollbar {  width: 0 ; }
-
-.biographical-table, .biographical-table th, .biographical-table td {
-  border: 1px solid #81C6F0;
-  box-shadow: none;
-  background-color: white ;
-  margin: 10px;
-  padding: 10px;
-  text-align: left;
-  border-collapse: collapse;
-}
-
-.highlighter {
-  background-color: #cceeff;
-  padding: 2px;
-  border-radius: 5px;
-}
-
-.good {
-  background-color: lightgreen ;
-}
-
-.caution {
-  background-color: #FFF49B ;
-}
-
-.warning, .alert {
-  background-color: tomato ;
-}
-
-.rainbow--border {
-  background: linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 8px) calc(100% - 8px) no-repeat,
-  conic-gradient(from 270deg, #7fd4ff 0%, #ac7fff 25%, #e87fff 50%, #ff7fee 75%, #7fd4ff 100%);
-  border-radius: 0px;
-  padding: 12px;
-  box-sizing: border-box;
-  display: block;
-  margin-top: 20px;
-  margin-bottom: 25px;
-}
-.rainbow--inline-border {
-  background: linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 8px) calc(100% - 8px) no-repeat,
-  conic-gradient(from 270deg, #7fd4ff 0%, #ac7fff 25%, #e87fff 50%, #ff7fee 75%, #7fd4ff 100%);
-  border-radius: 0px;
-  width: 75px ;
-  padding: 5px;
-  box-sizing: border-box;
-}
-
-.double-sided {
- border-width: 2px 0 2px 0 ; 
- margin-bottom: 10px ;
-}
-
