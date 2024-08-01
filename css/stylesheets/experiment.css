@@ -1,0 +1,212 @@
+/* Colors and URLS */
+:root {
+ 
+ --lighter-pink: #ffcad4 ;
+ --darker-pink: #fc94ac ;
+ --darkest-text-pink: #FA3060 ;
+ --pastel-blue: #cceeff ;
+ --body-border: url(https://merlins-ghast.neocities.org/Assets/Important-Borders/pink-on-pink-border.png) ;
+ --pink-mac-icon: url(https://merlins-ghast.neocities.org/Assets/pink-mac.gif) ;
+ --header-pink-axolotl: url(https://merlins-ghast.neocities.org/Assets/pink-axolotl-header.png) ;
+  
+}
+/* Media Queries */
+
+@media (max-width:1200px) {
+#body-div {
+  margin: 10px ;}
+}
+
+@media (min-width:1200px) {
+#body-div {
+  margin: 10px 225px ;}
+}
+
+/* Regular Code */
+
+body {
+  background-image: url("https://i4.glitter-graphics.org/pub/658/658634cdu9wz29u9.gif") ;
+  font-family: georgia ;
+  font-size: 16px ;
+  line-height: 1.6 ;
+  color: #820321 ;
+}
+
+#body-div { 
+  border: 7px solid;
+  border-image: url(https://merlins-ghast.neocities.org/Assets/Important-Borders/pink-on-pink-border.png) 5 fill round ;
+}
+
+
+hgroup{
+  background-image: url(https://merlins-ghast.neocities.org/Assets/Important-Borders/my-pastel-stripes.png) ;
+  background-size: 240px ;
+  border: 2px solid #fc94ac ;
+  padding: 30px 0;
+  margin: 10px ;
+  border-radius: 5px ;
+}
+
+header{
+  background-color: white ;
+  border-width: 2px 0 2px 0 ;
+  border-color: #ffcad4 ;
+  border-style: solid ;
+}
+
+header img {
+  width: 100% ;
+  
+}
+
+marquee {
+  border: 2px solid #fc94ac ;
+  padding: 5px 0 ;
+  border-radius: 5px ;
+
+  color: black ;
+  font-weight: bold ;
+  font-size: 1.25em ;
+}
+
+#wide-marquee, #conjoined-marquee {
+  margin: 5px 10px ;
+}
+
+#split-body {
+  display: grid ;
+  grid-template-columns: 2fr 1fr ;
+  column-gap: 10px ;
+  margin: 5px 10px ;
+} /* This moves us into 2 column mode */
+
+main {
+
+}
+
+#intro-boxes {
+    border: 2px solid #fc94ac ;
+    padding: 10px ;
+    border-radius: 5px ;
+  background-image: url("https://i5.glitter-graphics.org/pub/359/359405wtbcooen5j.jpg") ;
+    background-size: 400px ;
+}
+
+#intro-boxes section {
+  border: 2px solid #fc94ac ;
+  background-color: white ;
+  border-radius: 5px ;
+}
+
+#intro-boxes h2 {
+
+padding-left: 10px ;
+ margin-top: 10px; ;
+ margin-bottom: 0 ;
+ background: white ;
+ font-size: 1.5em ;
+ color: #820321 ;
+}
+
+#intro-boxes p {
+ padding: 0 15px; 
+}
+
+#quick-facts {
+ margin-bottom: 10px ; 
+ border-radius: 5px ;
+}
+
+#stamp-marquee {
+ margin: 10px 0 0 0; 
+}
+
+#special-thanks {
+      border: 2px solid #fc94ac ;
+  background-color: white ;
+  border-radius: 5px ;
+}
+
+#triple-split {
+ display: grid ;
+ grid-template-columns: 1fr 1fr 1fr ;
+ column-gap: 10px ;
+ padding: 10px 0 0 0; 
+}
+
+#triple-split div {
+    border: 2px solid #fc94ac ;
+  background-color: white ;
+  border-radius: 5px ;
+}
+
+
+aside{
+  border: 2px solid #fc94ac ;
+  border-radius: 5px ;
+  background-image: url("https://i5.glitter-graphics.org/pub/658/658645chjnyww8ey.gif") ;
+  background-size: 100px ;
+  color: #820321 ;
+  }
+  
+aside h3 {
+ border-width: 0 0 2px 0 ; 
+ border-color: #fc94ac ;
+ border-style: solid ;
+ text-align: center ;
+ margin-top: 0 ;
+ margin-bottom: 0 ;
+ background: white ;
+ font-size: 2em ;
+}
+
+.double-sided {
+ border-width: 2px 0 2px 0 ; 
+ margin-bottom: 10px ;
+}
+
+nav{
+ background-color: white ;
+ padding: 10px ;
+ line-height: 3 ;
+  background-image: url("https://merlins-ghast.neocities.org/Assets/Important-Borders/string-flowers.gif") ;
+  background-size: 100px ;
+}  
+
+nav a {
+  display: block ;
+  text-decoration: none ;
+  font-weight: bold ;
+  color: #820321 ;
+  text-align: center ;
+  border: 2px solid #fc94ac ;
+  border-radius: 25px ;
+  margin: 10px ;
+  box-shadow: 3px 3px 5px 0 lightgray ; 
+  background: white ;
+}
+
+nav a:hover {
+ box-shadow: 5px 5px 10px 0 gray ; 
+}
+
+footer{
+    background-image: url(https://merlins-ghast.neocities.org/Assets/Important-Borders/pastel-stripe.jpg) ;
+  border: 2px solid #fc94ac ;
+  padding: 30px 0;
+  margin: 10px ;
+  text-align: center ;
+  border-radius: 5px ;
+}
+
+
+
+  
+
+  
+
+
+  
+
+
+ 

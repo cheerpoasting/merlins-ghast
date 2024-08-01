@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en-US"> <!-- Setting the language helps people with screen-readers -->
+
+<!-- NOTE: This document will be written "flat", meaning without indents. This is just a personal preference, and doesn't change the code at all. -->
+
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- This tells phones how to display your page -->
+
+<title>Button Tutorial</title>
+
+<link rel="stylesheet" href="https://merlins-ghast.neocities.org/Various/Code-Tutorial/floral-menu.css" type="text/css" media="all"> <!-- Make sure to put the name of your stylesheet here! -->
+
+</head>
+
+<!-- The way my "display:grid" property is set up (in the CSS sheet), will make every item on the page alternate between being on the left and right. If you want three columns that aren't synced up, you'll need to surround what you want on the left, center, and right with a "div" -->
+
+<body>
+
+<hgroup> <!-- For things like your site banner, you should always use the tag "header" or "hgroup" to help make your CSS easier to style -->
+<h1>FLORAL MENU TUTORIAL</h1>
+<p>This tutorial will help you create a floral menu.</p>
+</hgroup>
+
+
+<!-- The way my "display:grid" property is set up (in the CSS sheet), will make every item in "main" alternates between being on the left and right. If you want three columns that aren't synced up, you'll need to surround what you want on the left, center, and right with a "div" -->
+
+
+<main> <!-- Main holds the parts of web page that change every time. If you use a side menu that's always the same, you shouldn't put that in here -->
+<aside class="floral-menu" style="margin:10px 0;max-width:200px">
+<h3> MENU </h3>
+<nav>
+<a href="">Link 1</a>
+<a href="">Link 2</a>
+<a href="">Link 3</a>
+<a href="">Link 4</a>
+<a href="">Link 5</a>
+</nav>
+</aside>
+<div class="columns column-double-wide">
+<h2> Welcome to my Menu Tutorial! </h2>
+
+
+
+<p><strong>Have you ever wanted to create really cool looking menus, but didn't know how?</strong> This detailed tutorial will teach you how step by step, including all the code you need, and explaining all of the settings so your buttons can look exactly the way you want.</p>
+<p>The most important part of creating a good looking button is to do prototyping: starting with something simple, then making it better and better until you are happy with the result. Another important part is making sure the settings you use don't interfere with anything else accidentally. To make sure you can use this menu without worrying about messing up other parts of your site, we'll be targeting a specific "class".</p>
+</div>
+
+<!-- -->
+
+<div class="columns column-left"> <!-- You can stack different classes on top of each other to reduce how often you need to repeat yourself on the CSS sheet -->
+<h3> PREVIEW </h3>
+<p>This is where the preview for the menu will go. I think that the lack of visual tutorials for coding are criminal!</p>
+</div>
+
+<div class="columns column-center">
+<h3> CODE </h3>
+<p>All of the code that you need to make the current step of the menu will be here</p>
+</div>
+
+<div class="columns column-right">
+<h3>EXPLAINATION</h3>
+<p>I'm not sure why, but a lot of coding tutorials just... skip the explaination phase. If you don't understand what's happening in the code, what did you really learn?</p>
+</div>
+
+
+<!-- -->
+
+<div class="columns"> 
+<h3> PREVIEW </h3>
+
+<aside class="step-1">
+<h3> MENU </h3>
+<nav>
+<a href="">Link 1</a>
+<a href="">Link 2</a>
+<a href="">Link 3</a>
+<a href="">Link 4</a>
+<a href="">Link 5</a>
+</nav>
+</aside>
+
+</div>
+
+<div class="columns">
+<h3> HTML </h3>
+<pre>
+<code>
+&lt;aside class=&quot;floral-menu&quot;&gt;
+  &lt;h3&gt; MENU &lt;/h3&gt;
+  
+&lt;nav&gt;
+  &lt;a href=&quot;&quot;&gt;Link 1&lt;/a&gt;
+  &lt;a href=&quot;&quot;&gt;Link 2&lt;/a&gt;
+  &lt;a href=&quot;&quot;&gt;Link 3&lt;/a&gt;
+  &lt;a href=&quot;&quot;&gt;Link 4&lt;/a&gt;
+  &lt;a href=&quot;&quot;&gt;Link 5&lt;/a&gt;
+&lt;/nav&gt;
+
+&lt;/aside&gt;
+</code>
+</pre>
+</div>
+
+<div class="columns">
+<h3> CREATE THE MENU </h3>
+
+The first and most important part is just to set your menu up correctly. 
+
+<ul>
+  <li>When you're creating a menu that does on the side of your website, you should almost always put in into an &lt;aside&gt; tag. This makes it easy to keep things clean and well organized, both in your HTML and your CSS.</li>
+  <li>Using an &lt;aside&gt; gives you a good overall container to attach your class to, in this case, our "floral-menu" class.</li>
+  <li>When creating menus of links, it's important to put them in a &lt;nav&gt; tag, which has a lot of advantages, compared to the old way of doing it.</li>
+  <ul>
+    <li>When you use a &lt;nav&gt; you don't need to make any unordered lists &lt;ul&gt; or list items &lt;li&gt;.</li>
+    <li>Instead, just put each of your &lt;a&gt; tags on a new level.</li>
+    <li>The readability of this is way better compared to the old method.</li>
+  </ul>
+  <li>Remember to add your links to the "href" so that your menu will work!</li>
+</ul>
+
+As far as HTML goes, we're all done! Isn't it crazy how clean your HTML can be, and you still get things done?
+
+</div>
+
+<!-- -->
+
+<div class="columns"> 
+<h3>PREVIEW</h3>
+
+<aside class="step-2">
+<h3> MENU </h3>
+<nav>
+<a href="">Link 1</a>
+<a href="">Link 2</a>
+<a href="">Link 3</a>
+<a href="">Link 4</a>
+<a href="">Link 5</a>
+</nav>
+</aside>
+
+</div>
+
+<div class="columns">
+<h3>CSS</h3>
+<pre>
+<code>
+
+.floral-menu {
+  border: 2px solid #fc94ac ;
+  text-align: center ;
+  background-color: lightblue ;
+  font-family: georgia , cursive ;
+  color: #820321 ;
+}
+
+</code>
+</pre>
+</div>
+
+<div class="columns">
+<h3>BASIC SETUP</h3>
+
+<p> Now we are going to style our menu, which should be done in CSS rather than on the HTML to keep things clean and understandable. </p>
+
+<ul>
+  <li>The first thing we always start with is defining the basics of our class "floral-menu"</li>
+  <li>We want a solid border around our menu, so we'll use a border that's 2 pixels thick.</li>
+  <li>To make our text centered, we use the "text-align" property.</li>
+  <li>We'll set up a background color, just to help us understand what we're looking at.</li>
+  <li>Then we'll set our font using "font-family". I like Georgia personally.</li>
+  <li>Then, finally, we use "color" to set the color of our text. While I like #820321, you can use any hex code you want, just remember to put the # before the code.</li>
+</ul>
+
+<p>While our menu still looks... pretty bad, honestly... we are making huge steps forward!</p>
+
+</div>
+
+<!-- -->
+
+<div class="columns"> 
+<h3>PREVIEW</h3>
+
+<aside class="step-3">
+<h3> MENU </h3>
+<nav>
+<a href="">Link 1</a>
+<a href="">Link 2</a>
+<a href="">Link 3</a>
+<a href="">Link 4</a>
+<a href="">Link 5</a>
+</nav>
+</aside>
+
+</div>
+
+<div class="columns">
+<h3>CSS</h3>
+<pre>
+<code>
+
+.floral-menu {
+  border: 2px solid #fc94ac ;
+  text-align: center ;
+  background-color: lightblue ;
+  font-family: georgia , cursive ;
+  color: #820321 ;
+}
+
+.floral-menu h3 {
+  background-color: white ;
+  border-bottom: 2px solid #fc94ac ;
+  margin: 0 ;
+  font-size: 2em ;
+}
+  
+</code>
+</pre>
+</div>
+
+<div class="columns">
+<h3>STYLE THE TITLE</h3>
+
+<p>Now we're going to set up the title of our menu. I might be a little basic, but I think "menu" works pretty well. You could change it to the name of your site or anything else you want.</p>
+
+<ul>
+  <li>If you look back at our HTML, we use &lt;h3&gt; for our title, so that's what we'll target in our CSS.</li>
+  <li>BUT! We don't want to target every &lt;h3&gt; on our page, only the ones in our menu, that's why we target ".floral-menu h3", so that only the &lt;h3&gt; in our menu will get changed.</li>
+  <li>We'll change our "background-color" to white for a fresh look with a lot of contrast.</li>
+  <li>We'll set the bottom border "border-bottom" to be the same style as our outer border for a cohesive look. You don't want borders on the side of the &lt;h3&gt;, because then it won't lay flat next to the outer border.</li>
+  <li>We usually need to set the "margin" to 0 to avoid any gaps around the &lt;h3&gt;'s background.</li>
+  <li>Finally, we set the "font-size" to "2em" which means twice as big as usual.</li>
+  <li>Our text is already colored because of the last step.</li>
+</ul>
+
+<p>Okay, our title is starting to look good, but what about our links? So ugly...</p>
+
+</div>
+
+<!-- -->
+
+<div class="columns"> 
+<h3>PREVIEW</h3>
+
+<aside class="step-4">
+<h3> MENU </h3>
+<nav>
+<a href="">Link 1</a>
+<a href="">Link 2</a>
+<a href="">Link 3</a>
+<a href="">Link 4</a>
+<a href="">Link 5</a>
+</nav>
+</aside>
+
+</div>
+
+<div class="columns">
+<h3>CSS</h3>
+<pre>
+<code>
+
+.floral-menu {
+  border: 2px solid #fc94ac ;
+  text-align: center ;
+  background-color: lightblue ;
+  font-family: georgia , cursive ;
+  color: #820321 ;
+}
+
+ .floral-menu h3 {
+  background: white ;
+  border-bottom: 2px solid #fc94ac ;
+  margin: 0 ;
+  font-size: 2em ;
+}
+
+.floral-menu nav a {
+  display: block ;
+  background-color: white ;
+  text-decoration: none ;
+  color: #820321 ;
+  margin: 10px ;
+  border: 2px solid #fc94ac ;
+}
+  
+
+</code>
+</pre>
+</div>
+
+<div class="columns">
+<h3>MAKING BUTTONS</h3>
+<p> Let's turn those links into buttons now. </p>
+
+<ul>
+  <li>First, we want to be sure that we're only targeting the &lt;a&gt; (links) that are inside the nav that's inside the floral menu. We do that by targeting ".floral-menu nav a"</li>
+  <li>One of the most important change you can make is to set "display" to "block". That's because normally a link is displayed "inline" meaning that while you can click on it, it doesn't change the way the text is written, except for adding an underline to let you know it is a link. When you change it to a "block" it starts to act like an object, not like text.</li>
+  <li>"Text-decoration" is the property that controls if our link is underlined. By setting it to "none" we can remove that underline.</li>
+  <li>Previously, we set the text color, but now we have to set "color" again. Why is that? It's because links are treated differently from regular text, so we have to change the color seperately.</li>
+  <li>Let's add a 10 pixel "margin" to keep our buttons all from touching each other.</li>
+  <li>Finally, let's add a border to our buttons to tie them in with the rest of the menu.</li>
+</ul>
+
+<p> Now our links are buttons, but they could still use some work... </p>
+
+</div>
+
+<!-- -->
+
+<div class="columns"> 
+<h3>PREVIEW</h3>
+
+<aside class="step-5">
+<h3> MENU </h3>
+<nav>
+<a href="">Link 1</a>
+<a href="">Link 2</a>
+<a href="">Link 3</a>
+<a href="">Link 4</a>
+<a href="">Link 5</a>
+</nav>
+</aside>
+
+</div>
+
+<div class="columns">
+<h3>CSS</h3>
+
+<pre>
+<code>
+
+.floral-menu {
+  border: 2px solid #fc94ac ;
+  text-align: center ;
+  background-color: lightblue ;
+  background-size: 100px ;
+  font-family: georgia , cursive ;
+  color: #820321 ;
+}
+
+.floral-menu h3 {
+  background: white ;
+  border-bottom: 2px solid #fc94ac ;
+  margin: 0 ;
+  font-size: 2em ;
+}
+
+.floral-menu nav {
+  padding: 25px ;
+}
+
+.floral-menu nav a {
+  display: block ;
+  background-color: white ;
+  text-decoration: none ;
+  color: #820321 ;
+  font-weight: bold ;
+  margin: 10px ;
+  line-height: 3 ;
+  border: 2px solid #fc94ac ;
+  border-radius: 25px ;
+}
+
+.floral-menu nav a:hover {
+  box-shadow: 5px 5px 10px 0 gray ; 
+}
+
+</code>
+</pre>
+
+</div>
+
+<div class="columns">
+<h3>MAKING GOOD BUTTONS</h3>
+
+<p>Now we need to make our buttons more stylish, by giving them a better shape, and making them "POP!" when we go to click on them</p>
+
+<ul>
+  <li>To give us more space inside of our buttons, let's change our "line-height" to 3, meaning it has 3 times as much space as usual. </li>
+  <li>Next, we'll set our "border-radius" to 25 pixels to give us a really round look. The higher this number is, the rounder the corners.</li>
+  <li>By setting our "font-weight" to bold, our links are easier to read, and seem more important.</li>
+  <li>Now, to make our buttons "POP!" we need to target ".floral-menu nav a:hover". ":hover" is a command that lets us change how things look when we have our mouse over them (which means it doesn't do anying on mobile).</li>
+  <li>We're going to use "box-shadow" to create a 3D effect when we mouse over our menu buttons.</li>
+  <ul>
+    <li>"box-shadow" has 5 parts: x | y | blur | offset | color.</li>
+    <li>"X" controls how far left and right your shadow goes.</li>
+    <li>"Y" controls how far up and down your shadow goes.</li>
+    <li>"Blur" controls how much your shadow spreads. The more it spreads, the lighter it becomes.</li>
+    <li>"Offset" controls how far off center your shadow is. I never use this property.</li>
+    <li>"Color" just represents what color the shadow will be. You probably want to use gray, black, or a darker version of your background color. If you don't know how to pick darker colors, you can use something like <a href="https://www.canva.com/colors/color-wheel/" target="_blank">Canva Color Wheel</a> and choose "monochromatic", or just adjust the dial for a darker color.</li>
+  </ul>
+</ul>
+
+<p>WHEW! We're almost done! There's only a few things left. </p>
+
+</div>
+
+<!-- -->
+
+<div class="columns"> 
+<h3>PREVIEW</h3>
+
+<aside class="step-6">
+<h3> MENU </h3>
+<nav>
+<a href="">Link 1</a>
+<a href="">Link 2</a>
+<a href="">Link 3</a>
+<a href="">Link 4</a>
+<a href="">Link 5</a>
+</nav>
+</aside>
+
+</div>
+
+<div class="columns">
+<h3>CSS</h3>
+
+<pre>
+<code>
+
+.floral-menu {
+  border: 2px solid #fc94ac ;
+  border-radius: 5px;
+  text-align: center ;
+  background-image: url("https://merlins
+    -ghast.neocities.org/Assets/Important-
+    Borders/string-flowers.gif") ;
+  background-size: 100px ;
+  font-family: georgia , cursive ;
+  color: #820321 ;
+}
+
+.floral-menu h3 {
+  background: white ;
+  border-bottom: 2px solid #fc94ac ;
+  margin: 0 ;
+  font-size: 2em ;
+}
+
+.floral-menu nav {
+  padding: 25px ;
+  line-height: 3 ;
+}
+
+.floral-menu nav a {
+  display: block ;
+  background-color: white ;
+  text-decoration: none ;
+  font-weight: bold ;
+  color: #820321 ;
+  margin: 10px ;
+  border: 2px solid #fc94ac ;
+  border-radius: 25px ;
+}
+
+.floral-menu nav a:hover {
+  box-shadow: 5px 5px 10px 0 gray ; 
+}
+
+</code>
+</pre>
+
+</div>
+
+<div class="columns">
+<h3>FINAL TOUCHES</h3>
+
+<p> We just need to put the finishing touches on our menu, and we're all done! </p>
+
+<ul>
+  <li>For "floral-menu" change "background-color" to "background-image" and add your URL inside. If you want to use the image I'm using, be sure to upload it to your own site and link your version. Remember <a href="http://www.webweaver.nu/html-tips/hotlinking.shtml" target="_blank">hotlinking is bad</a>!</li>
+  <li>"background-size" controls how big or small the image is displayed. It's different for every image, so just experiment until you like what you see.</li>
+  <li>By setting the "border-radius" of "floral-menu" to 5px, we give the overall menu a softer look.</li>
+</ul>
+
+<p> All done! You are now the proud owner of an awesome menu box!</p>
+
+</div>
+
+
+
+<template>
+<!-- -->
+
+<div class="columns"> 
+<h3>PREVIEW</h3>
+</div>
+
+<div class="columns">
+<h3>CODE</h3>
+</div>
+
+<div class="columns">
+<h3>EXPLAINATION</h3>
+</div>
+
+</template>
+
+</main>
+
+</body>
+</html>

@@ -1,0 +1,243 @@
+
+/* How the page should display at half screen or on mobile */
+
+@media (max-width:800px) {
+  
+}
+
+/* How the page should display full screen */
+
+@media (min-width:800px) {
+  
+main{
+  display: grid ; /* this turns the webpage into columns */
+  grid-template-columns: 2fr 2fr 3fr ; /* this splits the page into three columns that change based on how wide your screen is */
+  column-gap: 25px ;
+}
+
+body {
+ padding: 10px 50px ; /* This pushes the wepbage in from the sides */ 
+}
+
+}
+
+/* Displaying the things that are for my webpage, not your menu button */
+/* Normally I write my CSS "flat" (with no indents) but I thought indenting specific sections would make it easier to read */
+
+  /* Page Styling */
+  
+    body {
+      font-family: georgia ;
+      background-image: url("https://merlins-ghast.neocities.org/Assets/stagger-stars.png") ;
+      background-size: 60px ;
+      line-height: 1.6 ;
+    }
+    
+    a {
+     color: black ; 
+    }
+    
+    hgroup {
+     background-color: white ;
+     text-align: center ;
+     padding: 10px 0 ;
+     border-radius: 5px ; 
+     border: 1px solid black ;
+    }
+    
+    .header-nav { /* This makes sure that the navigation bar in the header, and the navigation bar in the menu don't mix styles */
+     text-align: center ;
+     background-color: #ffeecc ;
+    }
+
+  /* Column Controls */
+  
+    /* This controls all the columns */
+    
+      .columns {
+        background-color: white ;
+        padding: 20px ; /* This pushes all the words in */
+        border-radius: 5px ;
+        margin-bottom: 25px ;
+        border: 1px solid black ;
+      } 
+      
+      .columns h3 {
+       text-align: center ; 
+      }
+    
+    /* These each only control one individual column */
+    
+      .column-double-wide {
+       grid-column: span 2 ; /* This makes the column cover 2 columns (the whole width of the page) */ 
+       margin: 25px 0 ; 
+       padding: 10px 50px ;
+      }
+    
+      
+/* The things I need to use to show the steps of the menu button, NOT your actual menu! */
+  
+  .step-2 {
+    border: 2px solid #fc94ac ;
+    text-align: center ;
+    background-color: lightblue ;
+    background-size: 100px ;
+    font-family: georgia , cursive ;
+    color: #820321 ;
+  }
+  
+  .step-3 {
+    border: 2px solid #fc94ac ;
+    text-align: center ;
+    background-color: lightblue ;
+    background-size: 100px ;
+    font-family: georgia , cursive ;
+    color: #820321 ;
+  }
+  
+  .step-3 h3 {
+    background: white ;
+    border-bottom: 2px solid #fc94ac ;
+    margin: 0 ;
+    font-size: 2em ;
+  }
+  
+  .step-4 {
+    border: 2px solid #fc94ac ;
+    text-align: center ;
+    background-color: lightblue ;
+    background-size: 100px ;
+    font-family: georgia , cursive ;
+    color: #820321 ;
+  }
+  
+   .step-4 h3 {
+    background: white ;
+    border-bottom: 2px solid #fc94ac ;
+    margin: 0 ;
+    font-size: 2em ;
+  }
+  
+  .step-4 nav a {
+    display: block ;
+    background-color: white ;
+    text-decoration: none ;
+    color: #820321 ;
+    margin: 10px ;
+    border: 2px solid #fc94ac ;
+
+  }
+  
+
+  
+  .step-5 {
+    border: 2px solid #fc94ac ;
+    text-align: center ;
+    background-color: lightblue ;
+    background-size: 100px ;
+    font-family: georgia , cursive ;
+    color: #820321 ;
+  }
+  
+  .step-5 h3 {
+    background: white ;
+    border-bottom: 2px solid #fc94ac ;
+    margin: 0 ;
+    font-size: 2em ;
+  }
+  
+  .step-5 nav {
+    padding: 25px ;
+  }
+  
+  .step-5 nav a {
+    display: block ;
+    background-color: white ;
+    text-decoration: none ;
+    color: #820321 ;
+    font-weight: bold ;
+    margin: 10px ;
+    line-height: 3 ;
+    border: 2px solid #fc94ac ;
+    border-radius: 25px ;
+  }
+  
+      .step-5 nav a:hover {
+    box-shadow: 5px 5px 10px 0 gray ; 
+      }
+
+  .step-6 {
+    border: 2px solid #fc94ac ;
+    text-align: center ;
+    background-image: url("https://merlins-ghast.neocities.org/Assets/Important-Borders/string-flowers.gif") ;
+    background-size: 100px ;
+    font-family: georgia , cursive ;
+    color: #820321 ;
+    border-radius: 5px;
+  }
+  
+  .step-6 h3 {
+    background: white ;
+    border-bottom: 2px solid #fc94ac ;
+    margin: 0 ;
+    font-size: 2em ;
+  }
+  
+  .step-6 nav {
+    padding: 25px ;
+    line-height: 3 ;
+  }
+  
+  .step-6 nav a {
+    display: block ;
+    background-color: white ;
+    text-decoration: none ;
+    font-weight: bold ;
+    color: #820321 ;
+    margin: 10px ;
+    border: 2px solid #fc94ac ;
+    border-radius: 25px ;
+  }
+  
+  .step-6 nav a:hover {
+    box-shadow: 5px 5px 10px 0 gray ; 
+  }
+  
+/* This is your completed menu! */
+
+  .floral-menu {
+    border: 2px solid #fc94ac ;
+    text-align: center ;
+    background-image: url("https://merlins-ghast.neocities.org/Assets/Important-Borders/string-flowers.gif") ;
+    background-size: 100px ;
+    font-family: georgia , cursive ;
+    color: #820321 ;
+    border-radius: 5px ;
+  }
+  
+  .floral-menu h3 {
+    background: white ;
+    border-bottom: 2px solid #fc94ac ;
+    margin: 0 ;
+    font-size: 2em ;
+  }
+  
+  .floral-menu nav {
+    padding: 25px ;
+    line-height: 3 ;
+  }
+  
+  .floral-menu nav a {
+    display: block ;
+    background-color: white ;
+    text-decoration: none ;
+    font-weight: bold ;
+    color: #820321 ;
+    margin: 10px ;
+    border: 2px solid #fc94ac ;
+    border-radius: 25px ;
+  }
+  
+  .floral-menu nav a:hover {
+    box-shadow: 5px 5px 10px 0 gray ; 
+  }
