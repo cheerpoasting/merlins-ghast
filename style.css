@@ -17,7 +17,6 @@ header {
   min-height: 15px;
   padding: 5px 5px;
   margin: 0;
-  border-bottom: 1px solid #cedaf3;
 }
 
 #eyebrow a {
@@ -53,48 +52,44 @@ header {
 }
 
 #masthead {
-  font-weight: bold;
-  line-height: 1;
-  font-size: 20px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 80px;
-  padding: 1px 5px;
+  border-width: 2px 0;
+  border-style: solid;
+  border-color: #1d3994;
   margin: 0;
-  border-bottom: 1px solid #cedaf3;
+  background-color: #cedaf3;
+  color: #1d3994;
+  text-align: center;
 }
 
 #masthead h1 {
-  background-position: center;
-  display: block;
-}
-
-#masthead h1 a {
-  color: #1d3994;
-  display: block;
-  text-decoration: none;
+  font-size: 80px;
   margin: 0;
-  padding: 0;
 }
 
-.left-masthead {
-  display: block;
-}
-
-#masthead ul {
+#masthead nav {
+  text-align: center;
+  background-color: #cedaf3;
+  background-size: 100px;
+  font-family: georgia, cursive;
+  color: #1d3994;
+  padding: 5px;
+  line-height: 2;
   display: flex;
-  justify-content: space-between;
-  list-style-type: none;
-  border: 0;
-  margin: 0;
+  justify-content: space-around;
 }
 
-#masthead a {
-  color: #1d3994;
+#masthead nav a {
   display: block;
+  background-color: white;
   text-decoration: none;
-  margin: 0 4px;
-  padding: 0 4px;
+  font-weight: bold;
+  color: #1d3994;
+  margin: 5px;
+  border: 2px solid #1d3994;
+  border-radius: 25px;
+  width: 125px;
+}
+
+#masthead nav a:hover {
+  box-shadow: 5px 5px 10px 0 gray;
 }
