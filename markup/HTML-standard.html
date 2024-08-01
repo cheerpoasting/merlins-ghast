@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>HTML Standard</title>
+
+<link rel="stylesheet" type="text/css" href="https://merlins-ghast.neocities.org/style.css" media="all">
+<link rel="icon" type="image/x-icon" href="https://merlins-ghast.neocities.org/Assets/soot-sprite.gif">
+
+
+<style>
+table{margin-top:20px;margin-bottom:20px;}
+</style>
+
+</head>
+<body>
+<!-- ######################################################################################################################################### -->
+<header class="triple-wide" style="margin:10px;">
+<img src="https://merlins-ghast.neocities.org/Assets/merlins-ghast-short-banner.png" alt="site banner" style="width:100%;">
+</header>
+<nav class="header triple-wide global--spacing">
+<p id="topper"><strong> Main Menu</strong></p>
+<img id="computer" src="https://merlins-ghast.neocities.org/Assets/wide-button-love-computer.gif" alt="Button says i love my computer">
+<div class="header-nav">
+  <a id="sootie-lit" href="https://merlins-ghast.neocities.org/"><img id="sootie" src="https://merlins-ghast.neocities.org/Assets/soot-sprite.gif" alt="Soot Sprite Gif"></a>
+  <ul>
+    <li><a href="https://merlins-ghast.neocities.org/">Merlin's Ghast</a></li>
+    <li><a href="https://merlins-ghast.neocities.org/Blogs/blogs">Blogs</a></li>
+    <li><a href="https://merlins-ghast.neocities.org/Academic/academic">Academic</a></li>
+    <li><a href="https://merlins-ghast.neocities.org/Practical/practical">Practical</a></li>
+    <li><a href="https://merlins-ghast.neocities.org/Various/various">Various</a></li>
+    <li><a href="https://merlins-ghast.neocities.org/Review/review">Review</a></li>
+    <li><a href="https://merlins-ghast.neocities.org/Special/special">Special</a></li>
+  </ul>
+  </div><!-- inner nav end -->
+</nav> <!-- header nav end -->
+
+<!-- ################################################################################## -->
+<aside class="column__left  global--spacing">
+<nav>
+<p><strong>Reviews</strong></p>
+<a href="https://merlins-ghast.neocities.org/Review/review">Home</a>
+<a href="https://merlins-ghast.neocities.org/Review/music">Music</a>
+
+<p><strong>This Page</strong></p>
+<a href="#table-1.0">Introduction</a>
+</nav>
+</aside> <!-- column__left end -->
+
+<!-- ############################################################################## -->
+<section class="column__center  global--spacing double-wide">
+
+<h1> HTML Standard </h1>
+
+<table class="biographical-table">
+<tr>
+  <th>Author</th>
+  <th>Title</th>
+  <th>Year</th>
+</tr>
+<tr>
+  <td>WHATWG</td>
+  <td><a href="https://html.spec.whatwg.org/multipage/">HTML Standard</a></td>
+  <td>2024</td>
+</tr>
+</table>
+
+<p>
+This is a very long, technical document. The print version is about 1425 pages, and <span class="highlighter">it is not meant to be introductory</span>. I would recommend starting with beginner material, if you are new to HTML. I intend to read it again after finishing the introductory material, then again after finishing the CSS material.
+</p>
+
+<blockquote>
+"Some of the examples included in this specification might also be of use, but the novice author is cautioned that this specification, by necessity, defines the language with a level of detail that might be difficult to understand at first."
+</blockquote>
+
+<p> While material that is quoted is sometimes marked to make that clear, othertimes it isn't. I don't personally believe in copyright, so these kinds of distinctions aren't particularly important to me. </p>
+
+<div class="column__green  global--spacing">
+<p> I would say that you should always read any of the material in the green boxes, even if you are skimming a section and not really intending to read it, they contain humorous statements more often than you probably expect, given how technical the rest of the document is.</p>
+</div> <!-- column__green end -->
+</section>
+<section class="column__center  global--spacing triple-wide">
+<table id="table-1.0">
+<tr>
+  <th colspan="3"><a href="https://html.spec.whatwg.org/multipage/introduction.html#introduction">1.0 Introduction</a></th>
+</tr>
+<tr>
+  <td><a href="https://html.spec.whatwg.org/multipage/introduction.html#background">1.3</a></td>
+  <td>Background</td>
+  <td>Originally meant for scientific documents.</td>
+</tr>
+<tr>
+  <td><a href="https://html.spec.whatwg.org/multipage/introduction.html#extensibility">1.7.3</a></td>
+  <td>Extensibility</td>
+  <td>Class names should always be lowercase only, and contain a hyphen.</td>
+</tr>
+<tr>
+  <td><a href="https://html.spec.whatwg.org/multipage/introduction.html#html-vs-xhtml">1.8</a></td>
+  <td>HTML vs XML</td>
+  <td>HTML is permissive of errors, while XML is extremely strict.</td>
+</tr>
+<tr>
+  <td><a href="https://html.spec.whatwg.org/multipage/introduction.html#structure-of-this-specification">1.9</a></td>
+  <td>Structure of this specification</td>
+  <td>General overview of what each part of the document covers.</td>
+</tr>
+<tr>
+  <td><a href="https://html.spec.whatwg.org/multipage/introduction.html#how-to-read-this-specification">1.9.1</a></td>
+  <td><a href="#how-to-read">How to Read this Specification</a></td>
+  <td>I was somewhat surprised by the advice offered.</td>
+</tr>
+<tr>
+  <td><a href="https://html.spec.whatwg.org/multipage/introduction.html#a-quick-introduction-to-html">1.10</a></td>
+  <td>A quick introduction to HTML</td>
+  <td>DOM means <strong>Document Object Model</strong>.</td>
+</tr>
+<tr>
+  <td><a href="https://html.spec.whatwg.org/multipage/introduction.html#common-pitfalls-to-avoid-when-using-the-scripting-apis">1.10.2</a></td>
+  <td>Common pitfalls to avoid when using the scripting APIs</td>
+  <td>Scripts are run to completion, but HTML loading is paused to run the scripts.</td>
+</tr>
+<tr>
+  <td><a href="https://html.spec.whatwg.org/multipage/introduction.html#how-to-catch-mistakes-when-writing-html:-validators-and-conformance-checkers">1.10.3</a></td>
+  <td>How to catch mistakes when writing HTML: validators and conformance checkers</td>
+  <td class="current">You should be using <a href="https://whatwg.org/validator/">a validator</a> to check your HTML.</td>
+</tr>
+<tr>
+  <td><a href="https://html.spec.whatwg.org/multipage/introduction.html#presentational-markup">1.11.1</a></td>
+  <td>Presentational Markup</td>
+  <td>While putting style elements in HTML is okay for prototyping, they should be moved to a CSS stylesheet when prototyping is finished.</td>
+</tr>
+<tr>
+  <td><a href="https://html.spec.whatwg.org/multipage/introduction.html#restrictions-on-content-models-and-on-attribute-values">1.11.3</a></td>
+  <td>Restrictions on content models and on attribute values</td>
+  <td>Divs can never be put inside spans, only the other way around.</td>
+</tr>
+<tr>
+  <td><a href="https://html.spec.whatwg.org/multipage/introduction.html#suggested-reading">1.12</a></td>
+  <td>Suggested Reading</td>
+  <td class="current"><a href="https://w3c.github.io/wcag/guidelines/">Accessability Guidelines</a></td>
+</tr>
+</table>
+
+<table>
+<tr>
+  <th colspan="3"><a href="https://html.spec.whatwg.org/multipage/infrastructure.html">2.0 Common Infrastructure</a></th>
+</tr>
+<tr>
+  <td><a href="https://html.spec.whatwg.org/multipage/infrastructure.html#infrastructure">2.0</a></td>
+  <td>Common Infrastructure</td>
+  <td class="current">This specification depends on <a href="https://infra.spec.whatwg.org/">Infra</a>.</td>
+</tr>
+<tr>
+  <td><a href="https://html.spec.whatwg.org/multipage/infrastructure.html#terminology">2.1</a></td>
+  <td><a href="#html-terminology">Terminology</a></td>
+  <td>Defining "IDL" and "document".</td>
+</tr>
+<tr>
+  <td><a href="https://html.spec.whatwg.org/multipage/infrastructure.html#resources">2.1.2</a></td>
+  <td><a href="#resources-supported">Resources</a></td>
+  <td>Defining "supported" and "critical subresources".</td>
+</tr>
+<tr>
+  <td><a href="https://html.spec.whatwg.org/multipage/infrastructure.html#conformance-classes">2.1.8</a></td>
+  <td><a href="#conformance-classes">Conformance Classes</a></td>
+  <td>Defining "conforming documents" and explaining "conformance checkers".</td>
+</tr>
+<tr>
+  <td><a href="https://html.spec.whatwg.org/multipage/infrastructure.html#dependencies">2.1.9</a></td>
+  <td><a href="#html-dependencies">Dependencies</a></td>
+  <td class="current">Lists many dependencies.</td>
+</tr>
+<tr>
+  <td><a href="https://html.spec.whatwg.org/multipage/infrastructure.html#extensibility-2">2.1.10</a></td>
+  <td>Extensibility</td>
+  <td>Browsers can't have proprietary extensions because it reduces interoperability, limiting access to content.</td>
+</tr>
+</table>
+
+<table>
+<tr>
+  <th colspan="3"><a href="https://html.spec.whatwg.org/multipage/common-microsyntaxes.html">2.3 Common Microsyntaxes</a></th>
+</tr>
+<tr>
+  <td><a href="https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#common-microsyntaxes">2.3</a></td>
+  <td>Common Microsyntaxes</td>
+  <td>A microsyntax is how to format particular data types such as dates or numbers.</td>
+</tr>
+<tr>
+  <td><a href="https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#boolean-attributes">2.3.2</a></td>
+  <td>Boolean attributes</td>
+  <td>The value "false" is not allowed on a boolean attribute, instead, to represent a false value, the attribute has to be omitted.</td>
+</tr>
+<tr>
+  <td><a href="https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#numbers">2.3.4</a></td>
+  <td>Numbers</td>
+  <td class="current">Each subsection describes a different type of number and how they are defined and handled.</td>
+</tr>
+<tr>
+  <td colspan="3" class="current"> It would be good to create for myself python functions that parsed data in the way explained here, just as a way to make sure I understand all of them in good detail. Reading them all has been a good exercise.</td>
+</tr>
+</table>
+
+<table>
+<tr>
+  <th colspan="3"><a href="https://html.spec.whatwg.org/multipage/urls-and-fetching.html">2.4 URLs</a></th>
+</tr>
+<tr>
+  <th colspan="3"><a href="https://html.spec.whatwg.org/multipage/common-dom-interfaces.html">2.6 Common DOM Interfaces</a></th>
+</tr>
+<tr>
+  <td><a href="">Section</a></td>
+  <td><a href="">Title</a></td>
+  <td>Comments</td>
+</tr>
+<tr>
+  <td><a href="">Section</a></td>
+  <td><a href="">Title</a></td>
+  <td>Comments</td>
+</tr>
+<tr>
+  <td><a href="">Section</a></td>
+  <td><a href="">Title</a></td>
+  <td>Comments</td>
+</tr>
+<tr>
+  <td><a href="">Section</a></td>
+  <td><a href="">Title</a></td>
+  <td>Comments</td>
+</tr>
+</table>
+
+
+<!--
+<tr>
+  <td><a href="">Section</a></td>
+  <td><a href="">Title</a></td>
+  <td>Comments</td>
+</tr>
+-->
+</section>
+<main class="column__center  global--spacing triple-wide">
+<h2 id="how-to-read">1.9.1 How to Read This Specification</h2>
+
+<p>The advice for how to read this specification is not what I was originally expecting:</p>
+
+<blockquote cite="https://html.spec.whatwg.org/multipage/introduction.html#how-to-read-this-specification">
+"This specification should be read like all other specifications. First, it should be read cover-to-cover, multiple times. Then, it should be read backwards at least once. Then it should be read by picking random sections from the contents list and following all the cross-references."
+</blockquote>
+
+<h2 id="html-terminology">2.1 Terminology </h2>
+
+<dl>
+<dt>IDL</dt>
+<dd><a href="https://developer.mozilla.org/en-US/docs/Glossary/IDL"><em>According to MDN</em></a>, IDL stands for "Interface Description Language". It is a way to talk about "object interfaces" in a language-neutral way. In HTML, the IDL attributes are the attributes that you can read or set using Javascript. <br><a href=""><em>According to Wikipedia</em></a>, IDL can also mean "Interface Definition Language". It is a generic term for a language that lets one program in one language communicate with a program written in an unknown language. They often describe data types. They are often used to bridge different operating systems and computer languages.</dd>
+
+<dt>Document</dt>
+<dd>This term is used to refer to <em>any</em> use of HTML, from small static documents to large reports with rich multimedia and even interactive applications.</dd>
+</dl>
+
+<h2 id="resources-supported">2.1.2 Resources</h2>
+
+<dl>
+<dt>Supported</dt>
+<dd>When a format can be used without critical aspects being ignored. For example, a PNG is <em>supported</em> when the pixels can be rendered, even if the animation data isn't known to the parser. However, an MPEG-4 is <em>not supported</em> if the compression format isn't decodeable, even if the dimensions of the video can be determined.</dd>
+<dt>Critical Subresources</dt>
+<dd>Any component that a resource has to have in order to be processed correctly, which differs based on the resource in question.</dd>
+</dl>
+
+<h2 id="conformance-classes">2.1.8 Conformance Classes</h2>
+
+<dl>
+<dt>Conforming Documents</dt>
+<dd>"Conforming documents" are those that comply with all the conformance criteria for documents. For readability, some of these conformance requirements are phrased as conformance requirements on authors; such requirements are implicitly requirements on documents. For example, if a requirement statys that "authors must not use the foobar element", it would emply that documents are not allowed to contain elements named foobar.</dd>
+<dt> Conformance Checkers</dt>
+<dd>Conformance checkers must verify that a document conforms to the applicable critera. There are some things that can be checked by a machine -- these things must be checked by a conformance checker. Other things require knowledge of author intent, such as making sure the materials inside a blockquote are actually quotations from some source material.</dd>
+</dl>
+
+<h2 id="html-dependencies">2.1.9 Dependencies</h2>
+<p>A large number of important terms are defined in other specifications: Infra, Encoding, URL, HTTP, Fetch, Web IDL, ECMAScript (which is Javascript), DOM, Fullscreen, CSS, and many others.</p>
+
+<p>The default network protocol is HTTP, the default style sheet is CSS, the default scripting is Javascript. IF you use HTTP, you must also implement cookies.</p>
+
+
+
+</main> <!-- column__center end -->
+
+<!-- ######################################################################################################################################### -->
+<footer class="footer triple-wide global--spacing">
+<a href="https://merlins-ghast.neocities.org/"><img id="candy" src="https://merlins-ghast.neocities.org/Assets/star-candy-jar.webp" alt="Image of Candy Jar"></a>
+<p> <strong>Contact me via gmail: CheerPoasting</strong> <a href="https://merlins-ghast.neocities.org/Various/code"><img id="code" src="https://merlins-ghast.neocities.org/Assets/button-code-by-hand.gif" alt="Button says code by hand"></a> </p>
+
+
+</footer> <!-- footer end -->
+
+</body>
+</html>
