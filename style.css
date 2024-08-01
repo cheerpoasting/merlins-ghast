@@ -1,10 +1,10 @@
 body {
-   font-family: georgia;
+  font-family: georgia;
 }
 
 header {
- display: flex;
- flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 #eyebrow {
@@ -70,9 +70,9 @@ header {
   display: block;
   color: #1d3994;
   font-size: 80px;
-  margin:0;
+  margin: 20px 0;
   margin-left: 200px;
-  padding:0;
+  padding: 0;
 }
 
 #masthead h1 a {
@@ -104,5 +104,10 @@ header {
 }
 
 #masthead nav {
-  margin-left:40px;
+  margin-left: 40px;
+}
+
+.light-blue-box {
+  background-color: #cedaf3;
+  padding: 20px;
 }
