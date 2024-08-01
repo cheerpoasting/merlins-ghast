@@ -9,14 +9,13 @@ header {
 
 #eyebrow {
   font-weight: bold;
-  line-height: 1;
-  font-size: 12px;
+  font-size: 10px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  min-height: 20px;
-  padding: 1px 5px;
+  min-height: 15px;
+  padding: 5px 5px;
   margin: 0;
   border-bottom: 1px solid #cedaf3;
 }
@@ -51,4 +50,51 @@ header {
   margin-right: 0;
   padding-right: 0;
   height: 100%;
+}
+
+#masthead {
+  font-weight: bold;
+  line-height: 1;
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 80px;
+  padding: 1px 5px;
+  margin: 0;
+  border-bottom: 1px solid #cedaf3;
+}
+
+#masthead h1 {
+  background-position: center;
+  display: block;
+}
+
+#masthead h1 a {
+  color: #1d3994;
+  display: block;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+.left-masthead {
+  display: block;
+}
+
+#masthead ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  border: 0;
+  margin: 0;
+}
+
+#masthead a {
+  color: #1d3994;
+  display: block;
+  text-decoration: none;
+  margin: 0 4px;
+  padding: 0 4px;
 }
