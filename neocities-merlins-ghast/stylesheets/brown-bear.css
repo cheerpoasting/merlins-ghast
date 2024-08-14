@@ -1,0 +1,143 @@
+
+
+body {
+   background-color: white ;
+    background-size: 480px;
+  margin: 20px 100px;
+}
+
+.outline {
+ border: 5px solid black ; 
+}
+
+hgroup {
+ background-color: white ;
+ background-size: 800px ;
+ padding: 10px ;
+ margin: 0 ;
+}
+
+header {
+  border-top: 2px dotted #654321;
+  border-bottom: 2px dotted #654321; 
+  font-weight: bold;
+  color: 	#654321;
+  padding: 10px;
+  margin: 10px ;
+  background-color: white ;
+  line-height: 0 ;
+  margin-top: 0 ;
+}
+
+header h1 {
+ text-align: center ; 
+}
+
+nav {
+  background-color: lightblue ;
+  margin:0;padding:0;
+}
+
+main {
+  display: grid ;
+  grid-template-columns: 2fr 5fr;
+}
+
+aside {
+   background-color: white ;
+  background-size: 50px ;
+  border-right: 2px dotted lightgray ;
+}
+
+section {
+  background-color: white ;
+  border-style: none solid solid solid;
+  border-width: 2px ;
+  border-color: #654321;
+  margin: 20px ;
+  line-height: 2 ;
+}
+
+aside h3 {
+  border-top: 2px dotted #654321;
+  border-bottom: 2px dotted #654321; 
+  font-weight: bold;
+  color: 	#654321;
+  padding: 8px;
+  background-color: #C4A484 ;
+  line-height: 1 ;
+  margin-top: 0 ;
+} 
+
+aside p {
+  padding: 0 10px ;
+}
+
+.main-content {
+   background-color: white ;
+  background-size: 10px ;
+  padding: 0 20px 20px 20px ;
+}
+
+.main-content h2 {
+  border-top: 2px dotted #654321 ;
+  border-bottom: 2px dotted #654321 ;
+  font-weight: bold;
+  color: 	#654321 ;
+  padding: 8px;
+  background-color: #C4A484;
+  line-height: 1 ;
+  margin-top: 5 ;
+} 
+
+
+
+article {
+ background: white ;
+ padding: 0 ;
+   background-color: white ;
+  border-style: none solid solid solid;
+  border-width: 2px ;
+  border-color: #654321;
+}
+
+article p {
+ text-indent: 50px ; 
+ line-height: 1.6 ;
+ font-size: 16pt ;
+ padding: 0 20px ;
+}
+
+.sudoku-box::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.sudoku-box h3 {
+    border-top: 2px dotted #654321 ;
+  border-bottom: 2px dotted #654321 ;
+  font-weight: bold;
+  color: 	#654321 ;
+  padding: 8px;
+  background-color: #C4A484;
+  line-height: 1 ;
+}
+
+.sudoku-box img {
+ width: 50%; 
+ display: block;
+margin-left: 20px;
+float: left;
+padding: 0 20px 20px 0;
+}
+
+.sudoku-box p {
+ text-indent: 0;
+ margin-left: 20px;
+}
+
+.sudoku-box a {
+  color: 	#654321 ;
+  text-decoration: none;
+}

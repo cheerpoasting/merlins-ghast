@@ -1,0 +1,99 @@
+body {
+  line-height: 1.6;
+  margin: 0 20px;
+}
+
+header {
+    align-items:center;
+    text-align:center;
+    border-top: 1px solid #cedaf3;
+    border-bottom: 1px solid #cedaf3;
+}
+
+header a {
+    color: #1d3994;
+    text-decoration: none;
+}
+
+#eyebrow {
+  font-weight: bold;
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 15px;
+  margin: 0;
+  border-bottom: 1px solid #cedaf3;
+}
+
+#eyebrow a {
+  text-decoration: none;
+  color: #1d3994;
+}
+
+.blue-header h1 {
+  background-position: center;
+  display: block;
+  color: #1d3994;
+  font-size: 60px;
+  margin: 0;
+  padding: 20px 0;
+  background-image: url("https://merlins-ghast.neocities.org/assets/backgrounds/hearts.png");
+}
+
+.title-bar {
+  border-top: 1px solid #ccd7ed;
+  border-bottom: 1px solid #ccd7ed;
+  background-color: #f1f5ff;
+  margin:0;
+  padding-left:10px;
+}
+
+.title-bar-no-top {
+  border-top: none;
+}
+
+.h3-line {
+  border-bottom: 1px solid #ccd7ed; 
+}
+
+/* Additional, normal elements */
+
+table, td, th {
+  border-collapse: collapse;
+  border: 1px solid #1d3994;
+  text-align: left;
+  padding: 5px;
+}
+
+table {
+ max-width: 90%;
+ margin: 25px auto 25px auto;
+}
+
+table a {
+     color: #1d3994;
+}
+
+th {
+  background-color: #f1f5ff;
+}
+
+.blue-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-position: center;
+  color: #1d3994;
+  font-size: 20px;
+  margin: 0;
+  padding: 20px 40px;
+  background-image: url("https://merlins-ghast.neocities.org/assets/backgrounds/hearts.png");
+  border-top: 1px solid #cedaf3;
+}
+
+.blue-footer a {
+    color: #1d3994;
+    text-decoration: none;
+}

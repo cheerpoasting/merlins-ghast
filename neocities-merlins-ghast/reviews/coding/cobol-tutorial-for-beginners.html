@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Cobol Tutorial for Beginners</title>
+  
+  <link href="https://merlins-ghast.neocities.org/stylesheets/snippets/pills.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://merlins-ghast.neocities.org/stylesheets/snippets/blue-header.css" rel="stylesheet" type="text/css" media="all">
+  <link rel="icon" type="image/x-icon" href="https://merlins-ghast.neocities.org/assets/icons/item-cellphone.gif">
+  
+  <style>
+  
+    p {
+      margin-left: 10px;
+    }
+  
+  </style>
+</head>
+<body>
+
+
+<!-- -->
+<header class="blue-header">
+  <div id="eyebrow">
+  <a href="https://merlins-ghast.neocities.org/">Home</a>
+  <a href="https://merlins-ghast.neocities.org/about/about">About the Ghast</a>
+  </div>
+  <h1><span id="top" class="title-pill">Cobol tutorial for Beginners</span></h1>
+</header>
+
+
+<!-- -->
+<main>
+
+<main>
+<table id="biographical-table">
+<tr>
+<th>Author</th>
+<th>Title</th>
+<th>Year</th>
+</tr>
+<tr>
+<td>Miss Google.</td>
+<td><a href="https://www.youtube.com/watch?v=_pAX_ogguLI" target="_blank">Cobol tutorial for Beginners | Cobol Essential Training</a>,<span class="gray-pill">3H49</span></td>
+<td>2022.</td>
+</tr>
+</table>
+
+<h2 class="title-bar">Are you ready to get started? </h2>
+
+<p>COBOL is a procedural language.</p>
+
+<ul>
+<li>Environment: Windows</li>
+<li>WSL: Windows Subsystem for Linux</li>
+<li>Linux: Debian</li>
+<li>IDE: VSCode (WSL extention + Cobol extensions)</li>
+<li>Compiler: GNUCobol</li>
+</ul>
+
+<h2 class="title-bar">What is JCL? </h2>
+
+<p>JCL, Job Control Language- the scripting language for running COBOL programs</p>
+
+<ul>
+<li>this course won't cover this because we're not using a mainframe</li>
+</ul>
+
+<h2 class="title-bar">Obtain input from the user </h2>
+
+<ul>
+<li>Variables are declared in the working-storage section of the data division.</li>
+<li>Strings are concatenated using "," then the name of the variable.</li>
+</ul>
+
+<h2 class="title-bar">COBOL naming standards</h2>
+
+<ul>
+<li>Hyphen is the only special character allowed in user defined names</li>
+<li>WS is used to prefix variables for working storage</li>
+<li>DET is used to prefix variables used to write to files</li>
+</ul>
+
+<h2 class="title-bar">How to define types of data</h2>
+
+<p>Variables are defined in cobol in the following way:</p>
+<ul>
+<li>level number</li>
+<li>data name</li>
+<li>picture clause</li>
+<li>Value (optional)</li>
+</ul>
+
+<p>Level Numbers</p>
+<ul>
+<li>01 Field description or group level items</li>
+<li>02-49 elementary items</li>
+<li>66 reserved for the rename clause</li>
+<li>77 items that cannot be subdivided</li>
+<li>88 condition name entities</li>
+</ul>
+
+<ul>
+<li>"HIGH-VALUES" is often used to denote the end of a file.</li>
+
+<li>"FILLER" means something that isn't used anywhere else.</li>
+</ul>
+
+<h2 class="title-bar">Comp-3 data types  </h2>
+
+<p>comp-3 in cobol is a "packed decimal". This compresses numbers to half their size.</p>
+
+<p>This tells computers to use decimal arithmatic and not floating point.</p>
+
+<p>comp-3 is declared immediately after the pic clause</p>
+
+<h2 class="title-bar">Literal and figurative constants </h2>
+
+<p>Numeric literal can have 18 digits</p>
+<ul>
+<li>can have a decimal</li>
+</ul>
+
+<p>figurative constants can be things like "high-values", "zeroes", etc.</p>
+
+<h2 class="title-bar">Editing characters for writing reports </h2>
+
+<ul>
+<li>Z suppresses zeroes</li>
+<li>, prints a comma if there is a significant figure to the left</li>
+<li>* is called "check protection", and it keeps a symbol between a fixed dollar sign and actual values.</li>
+</ul>
+
+<h2 class="title-bar">Introducing to verbs</h2>
+
+<ul>
+<li>open - opens</li>
+<li>initialize - sets numbers to 0 and letters to spaces</li>
+<li>accept - get data from computer or user</li>
+<li>move - moves information from one data field to another</li>
+</ul>
+
+<p>some verbs have ending verbs: read/end-read, if/end-if</p>
+
+<h2 class="title-bar">Computational verbs </h2>
+
+<p>Verbs that perform calculations</p>
+
+<h3>ADD add digits</h3>
+
+<p>Suppose A is 5, B is 7, C is 1</p>
+
+<ul>
+<li>"ADD A TO B" adds 5 to B, changing B to 12</li>
+<li>"ADD A TO BE GIVING C" adds 5 and 7, changing C to 12</li>
+<li>"ADD A B TO C" adds 5 and 7 to C, changing C to 13</li>
+<li>"ADD A TO B C" adds 5 to B giving 12 & adds 5 to C giving 6.</li>
+</ul>
+
+<h3>SUBTRACT performs subtraction</h3>
+
+<p>A 5, B 7, C 20, D 10</p>
+
+<ul>
+<li>"SUBTRACT A FROM B" is B-5, giving 2</li>
+<li>"SUBTRACT A B FROM C" is C-5-7, giving 8</li>
+<li>"SUBTRACT AB FROM C GIVING D" is C-5-7, storing the 8 in D</li>
+</ul>
+
+<h3>MULTIPLY</h3>
+
+<p>A 5, B 7, C 20</p>
+
+<ul>
+<li>"MULTIPLY A BY B GIVING C" 5*7 = C (35)</li>
+<li>"MULTIPLY A BY B" multiplies A*7, changing A to 25</li>
+<li>"MULTIPLY A BY 3 GIVING B C" multiplies A*5, changing B and C to 15</li>
+</ul>
+
+<h3>DIVIDE</h3>
+
+<p>A 5, B 7, C 20</p>
+
+<ul>
+<li>"DIVIDE 2 INTO C" is c/2, giving 10</li>
+<li>"DIVIDE 2 INTO C GIVING B" is c/2, changing B to 10</li>
+<li>"DIVIDE 3 INTO A GIVING B REMAINDER C" is modulo division. A/2 equals 1 R2, so B becomes 1 and C becomes 2</li>
+</ul>
+
+<h3>COMPUTE</h3>
+
+<p>Allows you to do math using operators</p>
+
+<h4>classic method</h4>
+<ol>
+  <li>MULTIPLY A * A GIVING A-SQUARED</li>
+  <li>MULTIPLY B * B GIVING B-SQUARED</li>
+  <li>ADD A-SQUARED TO B-SQUARED GIVING C-SQUARED</li>
+  <li>COMPUTE C = (C-SQUARED)**.5</li>
+</ol>
+  
+<h4>pure compute method</h4>
+<ol>
+  <li>COMPUTE C = (A * A + B * B)**.5</li>
+</ol>
+  
+<p>compute statements always begin with the resulting variable set equal to the desired equation.</p>
+
+<h2 class="title-bar">Conditional expressions </h2>
+
+<p>IF, END-IF</p>
+<p>IF, ELSE, END-IF</p>
+
+<h3>Nested IF statements</h3>
+
+<p>can test for things:</p>
+<ul>
+<li>IS NUMERIC</li>
+<li>IS ALPHABETIC, IS ALPHABETIC-UPPER, IS ALPHABETIC-LOWER</li>
+<li>IS POSITIVE, IS NEGATIVE</li>
+<li>AND, OR, NOT</li>
+</ul>
+
+<h3>COMPARE</h3>
+<ul>
+<li>IS GREATER THAN (&gt;), IS LESS THAN (&lt;)</li>
+<li>IS EQUAL TO (=)</li>
+<li>IS NOT</li>
+<li>IS GREATER THAN OR EQUAL TO (&gt;=), IS LESS THAN OR EQUAL TO (&lt;=)</li>
+</ul>
+
+<h3>EVALUATE</h3>
+<ul>
+<li>EVALUATE, END-EVALUATE - basically a switch statement</li>
+</ul>
+
+<h2 class="title-bar">Perform statement</h2>
+
+<p>Cobol is sequential. It starts at the beginning and executes commands until told otherwise.</p>
+
+<p>The GO TO command has a limited use case, generally only for error handling, to close the files and end the program.</p>
+
+<h2 class="title-bar">Perform times</h2>
+
+<p>"PERFORM __ UNTIL __" lets you define loops.</p>
+
+
+<h2 class="title-bar">Challenge: Process payroll</h2>
+
+<a href="https://youtu.be/_pAX_ogguLI?si=IgoZ5vdZuqkchdzs&t=6897" target="_blank">START HERE</a>
+
+<h2 class="title-bar">Solution: Sample program to process payroll</h2>
+<h2 class="title-bar">Inserting records in a master data file</h2>
+<h2 class="title-bar">Updating records in a master file</h2>
+<h2 class="title-bar">Sorting records in COBOL</h2>
+<h2 class="title-bar">Merging records in COBOL </h2>
+<h2 class="title-bar">Challenge: Merge two employee files </h2>
+<h2 class="title-bar">Solution: Create a master employee file</h2>
+<h2 class="title-bar">Direct access files in COBOL</h2>
+<h2 class="title-bar">Relative files in COBOL</h2>
+<h2 class="title-bar">Indexed files in COBOL </h2>
+<h2 class="title-bar">Challenge: Create an indexed file </h2>
+<h2 class="title-bar">Solution: Solution for creating an indexed file</h2>
+<h2 class="title-bar">Using tables in COBOL</h2>
+<h2 class="title-bar">Creating tables from an input file</h2>
+<h2 class="title-bar">Searching tables in COBOL</h2>
+<h2 class="title-bar">Challenge: Create table of weather data </h2>
+<h2 class="title-bar">Solution: Search table of weather data</h2>
+<h2 class="title-bar">Inspecting strings in COBOL </h2>
+<h2 class="title-bar">Using the string command in COBOL </h2>
+<h2 class="title-bar">Using the unstring command in COBOL </h2>
+<h2 class="title-bar">Watch for numeric overflow in variables</h2>
+<h2 class="title-bar">How to read and find logic errors </h2>
+<h2 class="title-bar">Finding answers to your COBOL questions</h2>
+
+
+</main>
+
+
+<!-- -->
+<footer class="blue-footer">
+<a href="">&lt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Previous</a>&nbsp;|&nbsp;<a href="#top">Return to Top</a>&nbsp;|&nbsp;<a href="">Next&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;</a>
+</footer>
+</body>
+</html>

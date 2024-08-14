@@ -1,0 +1,47 @@
+.yellow-pill, .green-pill, .gray-pill, .red-pill, .purple-pill, .blue-pill, .brown-pill {
+  color: white;
+  font-weight: bold;
+  font-size: 0.8em;
+  border-radius: 25px;
+  padding: 0 4px;
+  margin: 0 5px;
+  font-family: Verdana;
+  text-decoration:none;
+}
+
+.yellow-pill {
+  background-color: orange;
+}
+
+.green-pill {
+  background-color: green;
+}
+
+.gray-pill {
+  background-color: darkgray;
+}
+
+.red-pill {
+  background-color: red;
+}
+
+.purple-pill {
+  background-color: purple;
+}
+
+.blue-pill {
+  background-color: darkblue;
+}
+
+.brown-pill {
+  background-color: #654321;
+}
+
+.title-pill {
+  background-color: white;
+  font-weight: bold;
+  border-radius: 50px;
+  padding: 10px 25px;
+  text-decoration:none;
+  border: 1px solid #beccea;
+}

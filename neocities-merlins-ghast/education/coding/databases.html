@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Database Design</title>
+  
+  <link href="https://merlins-ghast.neocities.org/stylesheets/snippets/pills.css" rel="stylesheet" type="text/css" media="all">
+    <link href="https://merlins-ghast.neocities.org/stylesheets/snippets/blue-header.css" rel="stylesheet" type="text/css" media="all">
+  <link rel="icon" type="image/x-icon" href="https://merlins-ghast.neocities.org/assets/icons/item-cellphone.gif">
+  
+  <style>
+  
+    img {
+     max-width: 75%; 
+     margin-left: auto; 
+     margin-right: auto; 
+     display: block;
+    }
+    
+  </style>
+</head>
+<body>
+
+
+<!-- -->
+<header class="blue-header">
+  <div id="eyebrow">
+  <a href="https://merlins-ghast.neocities.org/">Home</a>
+  <a href="https://merlins-ghast.neocities.org/about/about">About the Ghast</a>
+  </div>
+  <h1><span id="top" class="title-pill">Database Design</span></h1>
+</header>
+
+
+<!-- -->
+<main>
+<h2 class="title-bar title-bar-no-top">What's the big deal about databases?</h2>
+<p>Databases are simply a structured (or semi-structured) way to record information. Though you might not realize it, you interact with databases every day. Your identification card has a number tied to a government database, you likely have a school or employee number, you have a patient number at your doctor, you have a twitter ID. You have an account number at the bank, and transaction number. You have order numbers from Amazon. Basically, any time you see a number that isn't money, it's a field that someone uses in their database. Even phone numbers!<p>
+
+<p>Before computers, this consisted of things like indexed card files. With the invention of computers came flat-files, where all information was stored on one line, and the computer had to know exactly how long each field would be. In 1970, relational databases were invented, and in 1979 spreadsheets became available. While there are many other newer kinds of databases, relationational databases remain the most popular.</p>
+
+<h2 class="title-bar">What makes a database relational?</h2>
+
+<p>Relational databases are made up of tables. Each row (called a record) on a table has a unique identifier, called a key. This key can be listed in another table to form a <strong>relationship</strong> between the two tables, which is why they are called relational databases.</p>
+
+<p>However, the tables you think you'll see in a database probably don't reflect what's actually there. For example, when you imagine a table that might exist at Amazon, many people often thing that there must be their customer number, then their different order numbers, and under each order number will be the barcodes of the products they purchased.</p>
+
+
+<img style="width:50%;" src="https://merlins-ghast.neocities.org/assets/images/database-misconception.png" alt="customer invoices">
+
+<p>But this isn't the case at all! If it were, Amazon would need millions of tables! What you're imaging is actually a type of "report" produced by linking different tables together using their <em>relationships</em>.</p>
+
+<p>Instead, amazon will have one table that's just a giant list of customers, ordered by their user id number. Then, it will have a list of orders, listed by their order numbers. It will then have an intermediat or <em>relational</em> table that lists user id numbers on one side, and order ids on the other, so that they know who each order belongs to. Then, there will be a table full of products organized by their numbers, and a relational table that lists the order number on one side and the product IDs on the other.</p>
+
+<img src="https://merlins-ghast.neocities.org/assets/images/database-truth.png" alt="how main and relational tables work together to generate invoices">
+
+<h2 class="title-bar">What different kinds of structures can a Relational Database use?</h2>
+
+<p>Generally speaking, there are really only two common ways to structure the tables in a relational database: the star schema and the snowflake schema. Star schemas have a central "fact" table, with other tables clusering around it. Snowflake schemas are highly normalized and create a kind of snowflake shape.</p>
+
+<h2 class="title-bar">What is normalization?</h2>
+
+<p><strong>Normalization</strong> is a way to make sure that when you delete records you don't accidentally lose information about another topic, that when you add records you don't introduce incorrectly formatted data (misspellings), and that when you update information it will update everywhere. We do this by breaking things into as many tables as is reasonable for our application: that is, when accuracy is extremely important, data is heavily normalized. When speed is extremely important, we aim for as little normalization as we can, without compromising our data integrity.</p>
+
+<p> Let's say, for example, you have a table, and one of the <em>attributes</em> (columns of the table) is "pets", and it is a text field, where you can note the names and types of pets, as many or as few as exist. This data is <strong>not normalized</strong> because there could be more than one value in the pet field.</p>
+<p> If we take that pet field and instead create a table with pets, have a text field to describe their type (cat, dog, etc) and use a foreign key to link them back to their owner, then we have <strong>1st degree normalization</strong> because each thing is in it's own field.</p>
+<p> There are more degrees of normalization than this, but the 1st degree is the most essential. We only want to store one value per field.</p>
+
+</main>
+
+
+<!-- -->
+<footer class="blue-footer">
+<a href="">&lt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Previous</a>&nbsp;|&nbsp;<a href="#top">Return to Top</a>&nbsp;|&nbsp;<a href="">Next&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;</a>
+</footer>
+</body>
+</html>

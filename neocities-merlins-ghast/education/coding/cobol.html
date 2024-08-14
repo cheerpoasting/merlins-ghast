@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>COBOL programming language</title>
+  
+  <link href="https://merlins-ghast.neocities.org/stylesheets/snippets/pills.css" rel="stylesheet" type="text/css" media="all">
+  <link href="https://merlins-ghast.neocities.org/stylesheets/snippets/blue-header.css" rel="stylesheet" type="text/css" media="all">
+  
+  <link rel="icon" type="image/x-icon" href="https://merlins-ghast.neocities.org/assets/icons/item-cellphone.gif">
+  
+  <style>
+    h2 {  
+      border-bottom: 1px solid #ccd7ed;
+      border-top: 1px solid #ccd7ed;
+      background-color: #f1f5ff;
+      margin:0;
+      padding-left:10px;
+  }
+    p {
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+<!-- -->
+<header class="blue-header">
+  <div id="eyebrow">
+  <a href="https://merlins-ghast.neocities.org/">Home</a>
+  <a href="https://merlins-ghast.neocities.org/about/about">About the Ghast</a>
+  </div>
+  <h1><span class="title-pill">COBOL</span></h1>
+</header>
+
+
+<!-- -->
+<main>
+
+<h2> A Very Basic Background on COBOL </h2>
+
+<p>COBOL, or <b>Common Business Operating Language</b> is an old programming language found on IBM mainframes, which powers banking, finance, and airline reservations. It was formed by committee, so that all hardware and software sold to the US government would be more-or-less interoperable. In an effort to make computer programming easier to learn COBOL used "natural language programming", where the programming language is made as close to regular speech as possible. As part of this initiative, periods rather than semicolons are used to end lines. One of the first things you'll probably notice is how easy it is to read. This is important so that people like accountants and auditors without much special training could confirm that the programs were doing what was asked of them. </p>
+
+<h2 id="common-objections"> Common Objections<span class="yellow-pill">NEW</span></h2>
+<details>
+
+<q>COBOL doesn't work like modern languages.</q>
+<p>Well, sure. COBOL is a <b>procedural</b> language, while now functional and object-oriented languages are more popular. But is it so different from other modern procedural languages?</p>
+
+<q>COBOL can't be object-oriented</q>
+<p>Modern versions of COBOL have supported object-oriented programming since the early 2000s.</p>
+
+<q>COBOL is terrible to read, spaghetti code.</q>
+<p>COBOL was created so that people without any background in computers could program them, with minimal instruction. Is COBOL code worse than 1st semester python programs?</p>
+
+<q>COBOL code is a crazy mess, with tens or hundreds of thousands of lines!</q>
+<p>Imagine, for a moment, that the same 4 people worked on a C project together for 40 years. They knew none of them would leave and that new people wouldn't come in. They knew exactly what they were doing and why. Don't you think that they would write a lot of code? Don't you think they would build on top of old assumptions? Do you really think they'd be writing comments and documentation on anything? For goodness sake, they started coding together before the idea of refactoring was even named, before unit texting was invented, before version control existed.</p>
+
+<q>Being all caps makes COBOL hard to read.</q>
+<p>There are modern implimentations of COBOL with the lower-case preference we have now.</p>
+
+<q>You can't work with COBOL on modern computers</q>
+<p>You absolutely can. VSCode handles COBOL well, and you can compile to .exe with GNUCobol.</p>
+
+<q>COBOL has no libraries it can use</q>
+<p>Many modern COBOL implimentations can make good use of both Java and C libraries. They also have native support for mySQL.</p>
+
+<q>COBOL can't use functions</q>
+<p>Nearly all modern implimentations support user defined functions.</p>
+
+<q>COBOL is weird because indexing starts at 1.</q>
+<p>COBOL was designed for normal people without a specific programming education. You might not remember it anymore, but when you first learned about indexing, you found it weird and unintuitive to have the first element of an array be the "0" index, the 2nd element to be "1", the 3rd element to be "2" and so on. COBOL relies on the normal human intuition that the first item will be labeled with "1". <b>COBOL is not alone in this, Lua does it too.</b></p>
+
+<q>COBOL is weird because it displays loops differently.</q>
+<p>COBOL was written before loops were a standard architecture. Visually, loops look a bit strange in COBOL, but their use in modern implimentations is pretty straightforward.</p>
+
+<q>COBOL is weird because it ends things with periods, rather than using curly brackets "{}" or a semicolon ";".</q>
+<p>When COBOL was written, the semicolon was already in use, but it wasn't yet dominant. There were quite a few other languages at the time that used the period "." to make it easier for untrained people to take up programming quickly.</p>
+
+<q>The 80 character line limit in COBOL is annoying</q>
+<p>Many modern implimentations of COBOL do not have 80 character limits. The original reason for the limitation was because COBOL was a physical language -- if you used more than 80 characters per line, the data wouldn't fit on the punch card! COBOL maintained backwards compatibility with that for a long time. But with modern implimentations, there's no reason you cannot use more contemporary line lengths.</p>
+
+<q>There are no good IDEs for COBOL!</q>
+<p>Depends on what you mean by "IDE". If you're referring to editors, VSCode supports COBOL. There <i>are</i> actual IDEs available, about half of which are expected to run on mainframes.</p>
+
+<q>There's no native GUI support for COBOL!</q>
+<p>There actually isn't any either for Python, but when has that stopped anyone?</p>
+
+<q>COBOL doesn't support standard operators like "*/+-="! You have to type using words instead.</q>
+<p>I'm not entirely sure if this was ever true, but it definately hadn't been true since the 1980s. All modern COBOL implementations could accept "CALCULATE C=(A**2+B**2)**0.5"</p>
+</details>
+
+<h2> Quirks </h2>
+
+<p>Some of the quirks of COBOL come from the fact that the language is so old that it used to run on punch cards. For this reason, the amount of space from the left-hand margin is important for the computer to understand the instructions you give. Some parts are manditory, while others are completely ignored by the computer. IDEs will make your job easier by displaying vertical lines so that you can place characters in the correct position. </p>
+
+<table>
+  <tr>
+  <th>Characters</th>
+  <th>Used For</th>
+  </tr>
+  <tr>
+    <td>1-6</td>
+    <td>Optional Line Numbers</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>Indicator, denoting somethings special about the row</td>
+  </tr>
+  <tr>
+    <td>8-11</td>
+    <td>Headings and readability</td>
+  </tr>
+  <tr>
+    <td>12-72</td>
+    <td>Normal Code</td>
+  </tr>
+  <tr>
+    <td>73-80</td>
+    <td>Freespace!</td>
+  </tr>
+</table>
+
+<p>Note, however, that in many modern implimentations you can have as many characters per line as you please, as long as they begin on the correct part of the line. Other quirks are a result of the fact that many common concepts and ways of doing things in computer programs hadn't even been invented yet, like the standard way of structuring a FOR loop.</p>
+
+<h2> Structure </h2>
+
+<p>The structure of COBOL is hierarchical, starting with Divisions, then moving down into sections, paragraphs, sentences, and ending with statements.</p>
+
+<ul>
+  <li><b>Statements</b>: These are simple instructions like ADD A TO B.</li>
+  <li><b>Sentences</b>: A collection of one or more statements ended by a period.</li>
+  <li><b>Paragraphs</b>: A readability feature to help you group sentences that work together. These can be called by name.</li>
+  <li><b>Section</b>: Some sections of paragraphs are user-defined, while others are manditory.</li>
+  <li><b>Divisions</b>: There are 4 manditory divisions for each program, and newer versions of COBOL have a few optional ones.</li>
+  <ol>
+    <li><b>Identification</b>: Contains information about the program and who wrote it.</li>
+    <li><b>Environment</b>: What type of computer this will run on, and "mapping".</li>
+    <li><b>Data</b>: All of the data will be used, where it will be stored, and what will happen at the end.</li>
+    <li><b>Procedure</b>: The normal part of the program.</li>
+  </ol>
+</ul>
+
+<h2>Variables or "Datanames"</h2>
+
+<p>All variables and their hierarchy is specified in the data division.</p>
+
+<b>Requirements:</b>
+<ul>
+  <li>Under 30 Characters</li>
+  <li>Can only contain letters, numbers, and dashes</li>
+  <li>You must declare the type of variable (ex. letters, numbers, or a mix of both)</li>
+  <li>You must specify how many characters the variable takes up. If you don't, it defaults to one.</li>
+</ul>
+
+<p>The requirements for the datanames are set in the picture or "pic" area. For example, "pic 9(4)" would mean a 4 digit number field.</p>
+<ul>
+<li>9 stands for numbers. NOTE: because "." is used to end lines, the letter V stands for decimal places.</li>
+<li>A stands for letters.</li>
+<li>X stands for a mixture of letters and numbers.</li>
+</ul>
+
+<p>Under normal circumstances, numberic fields only contain 18 digits, while alphabetic ones can reach 255.</p>
+
+<h2>Procedure Division</h2>
+
+<p>Paragraphs are named: try to give them good, descriptive names to help you understand them when you reference them later.</p>
+
+<p>Paragraphs can be placed before or after what calls them, but they should remain nearby so that they are easy to find.</p>
+
+<p>COBOL can reference different parts of its code, but this is done sparingly. Be careful to avoid using "GO-TO" unless you understand exactly how it works, and you're sure that it is the only option.</p>
+
+</main>
+
+
+<!-- -->
+</body>
+</html>

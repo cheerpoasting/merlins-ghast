@@ -1,0 +1,376 @@
+:root {
+ --title-bar-background: #F6EDF3;
+ --border-color: #D6ADC8;
+ --header-and-link-color: #A05085;
+ 
+}
+
+body {
+  font-family: georgia;
+  background-color: #FBF3ED;
+  color: #45233A;
+}
+
+.big-header {
+  margin:0;
+  background-image:url("https://merlins-ghast.neocities.org/assets/backgrounds/hearts.png");
+  border: 1px solid var(--border-color);
+}
+
+ul {
+  list-style-type:none;
+  padding: 0;
+  margin: 0;
+      line-height: 1.6;
+}
+
+a {
+    color: var(--header-and-link-color);
+    text-decoration: none;
+}
+
+li{
+  padding:0;
+  margin:0;
+}
+
+#main-body {
+    display: grid;
+   grid-template-columns: 2fr 3fr 3fr;
+    grid-gap: 20px;
+    line-height: 1.6;
+    margin-top:20px;
+}
+
+#eyebrow {
+  font-weight: bold;
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 15px;
+  padding: 0px 5px ;
+  margin: 0;
+  border-bottom: 1px solid var(--border-color);
+background-color:white;
+}
+
+#eyebrow a {
+  text-decoration: none;
+  color: var(--header-and-link-color);
+}
+
+#eyebrow ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#eyebrow li {
+  border-right: 1px solid var(--border-color);
+  margin-right: 8px;
+  padding-right: 8px;
+}
+
+#eyebrow .li-short {
+  border: none;
+  margin-right: 0;
+  padding-right: 0;
+}
+
+#masthead {
+  font-weight: bold;
+  line-height: 1;
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  min-height: 60px;
+  padding: 1px 5px;
+  margin: 0;
+
+}
+
+#masthead h1 {
+  background-position: center;
+  display: block;
+  color: var(--header-and-link-color);
+  font-size: 60px;
+  margin: 20px 0;
+  margin-left: 300px;
+  padding: 0;
+}
+
+#masthead h1 a {
+  color: var(--header-and-link-color);
+  display: block;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+#masthead ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  list-style-type: none;
+  border: 0;
+  margin: 0 0 0 40px;
+  line-height: 1.1;
+}
+
+#masthead a {
+  color: var(--header-and-link-color);
+  display: block;
+  text-decoration: none;
+  margin: 0 4px;
+  padding: 0 4px;
+}
+
+#masthead nav {
+  margin-left: 40px;
+}
+
+#quick-search {
+  background-color: var(--title-bar-background);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    text-align: center;
+    padding: 5px 200px 14px 200px;
+}
+
+#quick-search ul {
+ display: flex;
+ flex-direction: row;
+ justify-content: flex-start;
+ list-style-type: none;
+ padding: 0;
+ margin:0 0 0 200px;
+ line-height:1;
+}
+
+#quick-search a {
+  color: var(--header-and-link-color);
+  display: block;
+  text-decoration: none;
+  margin: 0 4px;
+  padding: 0 4px;
+}
+
+fieldset, form, input, button {
+ margin: 0 ;
+ padding: 0 ;
+ box-sizing: border-box;
+ vertical-align: middle;
+ border: none;
+}
+
+input {
+ width: 400px; 
+ height: 35px; 
+ border: 1px solid var(--border-color) ;
+ padding-left: 12px;
+ padding-top: 4px;
+}
+
+
+
+#three-links {
+ display: flex;
+ flex-direction: row;
+ list-style-type: none;
+ justify-content: center ;
+ margin: 5px 100px;
+}
+
+#three-links li {
+    margin-right: 30px;
+}
+
+#three-links a {
+  text-decoration: none;
+  color: var(--header-and-link-color);
+}
+
+.left-aside a {
+    text-decoration: none;
+  color: var(--header-and-link-color);
+  line-height: 2 ;
+}
+
+.left-aside div {
+  background-color: var(--title-bar-background);
+  border: 1px solid var(--border-color);
+  border-radius: 25px;
+  margin-bottom: 10px;
+    padding: 10px ;
+}
+
+.left-aside h1 {
+ font-size: 1em; 
+ margin: 0;
+ line-height: 2;
+}
+
+.left-aside ul {
+ list-style-type: none ;
+ margin: 0;
+ padding: 0;
+}
+
+.left-aside li {
+ text-decoration: none;
+ margin: 0;
+ padding: 0;
+ line-height:2;
+}
+
+.outline-only {
+    border: 1px solid var(--border-color);
+    border-radius: 25px;
+        background-color: var(--title-bar-background);
+    padding: 0;
+    margin: 0 0 10px 0;
+}
+
+
+.tabs {
+  list-style-type: none;
+border-bottom: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 10px;
+}
+
+.tabs li {
+  margin: 0;
+  padding: 0;
+}
+
+.tabs a {
+  text-decoration: none; 
+  color: var(--header-and-link-color);
+  background-color: white;
+  border-width: 1px 1px 0 1px;
+  border-style: solid; 
+  border-color: var(--border-color);
+  margin: 10px 10px 0 10px;
+  padding: 5px 15px 15px 15px;
+  border-bottom: 1px solid white;
+}
+
+.white-background {
+ background-color: white ;
+ margin: 0;
+ padding: 20px;
+ display:flex;
+ flex-direction:row-reverse;
+ justify-content:space-between;
+}
+
+.white-background-with-border {
+ background-color: white ;
+ margin: 0 0 10px 0;
+ padding: 0;
+ border: 1px solid var(--border-color);
+ border-top: none;
+ border-radius: 25px;
+}
+
+.flex-row {
+   display:flex;
+ flex-direction:row;
+ justify-content:space-around;
+}
+
+.title-bar {
+  border: 1px solid var(--border-color);
+  border-radius: 15px;
+  background-color: var(--title-bar-background);
+  color: var(--header-and-link-color);
+  margin:-1px;
+  padding-left:10px;
+}
+
+.light-pill {
+  background-color: var(--title-bar-background);
+  color: var(--header-and-link-color);
+  font-weight: bold;
+  font-size: 0.8em;
+  border-radius: 25px;
+  padding: 0 4px;
+  margin: 0 5px;
+  font-family: Verdana;
+  text-decoration:none;
+}
+
+.medium-pill {
+  background-color: var(--border-color);
+  color: white;
+  font-weight: bold;
+  font-size: 0.8em;
+  border-radius: 25px;
+  padding: 0 4px;
+  margin: 0 5px;
+  font-family: Verdana;
+    text-decoration:none;
+}
+
+.dark-pill {
+  background-color: var(--header-and-link-color);
+  color: white;
+  font-weight: bold;
+  font-size: 0.8em;
+  border-radius: 25px;
+  padding: 0 4px;
+  margin: 0 5px;
+  font-family: Verdana;
+    text-decoration:none;
+}
+.red-pill {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  font-size: 0.8em;
+  border-radius: 25px;
+  padding: 0 4px;
+  margin: 0 5px;
+  font-family: Verdana;
+    text-decoration:none;
+}
+
+cite {
+  color: darkgray;
+  display: block;
+  font-style: normal;
+  margin:0;
+  padding: 0;
+}
+
+button {
+  background-color: var(--border-color);
+  color: white;
+  font-weight: bold ;
+ width: 125px; 
+ height: 33px; 
+ border: 0;
+ border-radius: 0;
+ margin-left: 10px;
+}
+
+button a {
+    color: white;
+  font-weight: bold ;
+}
+
+.button-a {
+    color: white;
+  font-weight: bold ;
+}
+
+.hidden {
+  display: none ;
+}
